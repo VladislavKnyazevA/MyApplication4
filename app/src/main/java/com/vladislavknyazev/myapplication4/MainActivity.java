@@ -1,4 +1,4 @@
-package com.vladislavknyazev.myapplication3;
+package com.vladislavknyazev.myapplication4;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnDiv;
     Button btnRad;
     Button btnFract;
-    Button btnBack;
+    Button btnNext;
 
     TextView tvResult;
 
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnDiv = (Button) findViewById(R.id.btnDiv);
         btnRad = (Button) findViewById(R.id.btnRad);
         btnFract = (Button) findViewById(R.id.btnFract);
-        btnBack = (Button) findViewById(R.id.btnBack);
+        btnNext = (Button) findViewById(R.id.btnNext);
 
         tvResult = (TextView) findViewById(R.id.tvResult);
 
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnDiv.setOnClickListener(this);
         btnRad.setOnClickListener(this);
         btnFract.setOnClickListener(this);
-        btnBack.setOnClickListener(this);
+        btnNext.setOnClickListener(this);
     }
 
     @Override
@@ -68,10 +68,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         double result = 0;
 
         switch (view.getId()) {
-            case R.id.btnBack:
-                Intent intent = new Intent(MainActivity.this, FirstActivity.class);
-                startActivity(intent);
-                finish();
+            case R.id.btnNext:
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent);finish();
                 break;
             default:
                 break;
